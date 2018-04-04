@@ -19,6 +19,7 @@ set :views, Proc.new { File.join(root, "../views/") }
     members.each do |info|
       Hero.new(info)
     end
+    
     @heroes = Hero.all
 
     erb :team
