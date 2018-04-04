@@ -5,8 +5,10 @@
     <title>All about superheroes!</title>
   </head>
   <body>
-    <h1><%= @team[:name] %></h1><br>
-      <h2>Team Motto: <%= @team[:motto] %></h2><br>
+    <!-- <h1><%= @team[:name] %></h1><br> -->
+    <h1><%= @team.name %></h1><br>
+    <h2>Team Motto: <%= @team.motto %></h2><br>
+    <!-- <h2>Team Motto: <%= @team[:motto] %></h2><br> -->
 
       <!-- <% @members.each do |hero| %>
         <h2>Hero Name: <%= hero[:name] %></h2><br>
