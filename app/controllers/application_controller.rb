@@ -10,8 +10,16 @@ set :views, Proc.new { File.join(root, "../views/") }
 
   post '/teams' do
 # binding.pry
-    @team = params[:team]
+    # @team = params[:team]
+    # @members = params[:team][:members]
+
+    @team = Team.new(params[:team])
     @members = params[:team][:members]
+    
+    @members.each do |info|
+      Hero.new(info)
+    end
+    @heroes = Hero.all
 
     erb :team
   end
