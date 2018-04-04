@@ -9,11 +9,7 @@ set :views, Proc.new { File.join(root, "../views/") }
   end
 
   post '/teams' do
-# binding.pry
-    # @team = params[:team]
-    # @members = params[:team][:members]
-
-    @team = Team.new(params[:team])
+    @team = params[:team]
     @members = params[:team][:members]
 
     erb :team
