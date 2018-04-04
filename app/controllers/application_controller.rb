@@ -15,9 +15,9 @@ binding.pry
     # @members = params[:team][:members]
     #
     # @team = Team.new(params[:team])
-    members = params[:team][:members]
-    # params[:team][:members].each do |info|
-    members.each do |info|
+    # members = params[:team][:members]
+    params[:team][:members].each do |info|
+    # members.each do |info|
       Hero.new(info)
     end
 
