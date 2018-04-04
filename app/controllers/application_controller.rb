@@ -14,13 +14,7 @@ set :views, Proc.new { File.join(root, "../views/") }
     # @members = params[:team][:members]
 
     @team = Team.new(params[:team])
-    members = params[:team][:members]
-
-    members.map do |info|
-      Hero.new(info)
-    end
-
-    @heroes = Hero.all
+    @members = params[:team][:members]
 
     erb :team
   end
